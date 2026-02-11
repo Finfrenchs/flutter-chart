@@ -1,9 +1,9 @@
-import 'package:deriv_chart/src/deriv_chart/interactive_layer/crosshair/crosshair_variant.dart';
-import 'package:deriv_chart/src/deriv_chart/interactive_layer/crosshair/find.dart';
 import 'package:deriv_chart/src/deriv_chart/chart/data_visualization/chart_series/data_series.dart';
 import 'package:deriv_chart/src/deriv_chart/chart/x_axis/x_axis_model.dart';
-import 'package:deriv_chart/src/models/tick.dart';
+import 'package:deriv_chart/src/deriv_chart/interactive_layer/crosshair/crosshair_variant.dart';
+import 'package:deriv_chart/src/deriv_chart/interactive_layer/crosshair/find.dart';
 import 'package:deriv_chart/src/models/candle.dart';
+import 'package:deriv_chart/src/models/tick.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
@@ -170,7 +170,7 @@ class CrosshairController extends ValueNotifier<CrosshairState> {
       return const Duration(milliseconds: 80);
     }
 
-    final double durationInRange = (dragXVelocity - 500) / (2500) * 75 + 5;
+    final double durationInRange = (dragXVelocity - 500) / 2500 * 75 + 5;
     return Duration(milliseconds: durationInRange.toInt());
   }
 
